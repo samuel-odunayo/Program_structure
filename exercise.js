@@ -40,3 +40,35 @@ for (let i = 0; i < size; i++) {
   chessboard += "\n";
 }
 console.log(chessboard);
+
+
+// Recursion exercise
+function isEven(n) {
+  if (n < 0) return isEven(-n); 
+  if (n === 0) return true;    
+  else if (n === 1) return false;    
+  else return isEven(n - 2);  
+}
+
+console.log(isEven(50)); 
+console.log(isEven(75));
+console.log(isEven(-1)); 
+
+
+// Bean counting exercise
+function countChar(string, ch) {
+    let count = 0;
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === ch) {
+            count += 1;
+        }
+    }
+    return count;
+}
+
+function countBs(string) {
+    return countChar(string, "B");
+}
+
+console.log(countBs("BOB"));
+console.log(countChar("kakkerlak", "k")); 
